@@ -61,6 +61,14 @@
         .nav-links a:hover {
             color: #00aaff;
         }
+        
+       . button{
+           height: 5px;
+           width: 5px;
+           background-color: #000000;
+           font-color: #fffff;
+       }
+        
         @keyframes bluish-border {
     0% {
         border-color: #00aaff;
@@ -71,7 +79,7 @@
     100% {
         border-color: #00aaff;
     }
-        }
+}
 
         .home-section {
             display: flex;
@@ -83,8 +91,10 @@
             margin: 50px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             flex-wrap: wrap;
-            animation: rgb-border 5s linear infinite; 
-    
+            position: relative;
+            border: 4px solid; 
+    animation: rgb-border 5s linear infinite; 
+    }
         }
 
         .intro, .profile-image {
@@ -96,7 +106,7 @@
             max-width: 100%;
             height: auto;
             margin: 20px 0;
-            border-radius: 10px 40px 10px 40px; 
+            border-radius: 10px 40px 10px 40px; /* Slight curve */
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
@@ -110,27 +120,31 @@
                 max-width: 40%;
             }
         }
-        @keyframes bluish-border {
+        @keyframes rgb-border {
     0% {
-        border-color: #00aaff;
+        border-color: #ff0000;
     }
-    50% {
-        border-color: #00ffff;
+    33% {
+        border-color: #00ff00;
+    }
+    66% {
+        border-color: #0000ff;
     }
     100% {
-        border-color: #00aaff;
+        border-color: #ff0000;
     }
-        }
-
+}  
+          
         .about-section, .skills-section, .projects-section {
             padding: 50px;
             background-color: rgba(255, 255, 255, 0.05);
             margin: 20px 50px;
-            border-radius: 20px; /* Slight curve */
+            border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            animation: rgb-border 5s linear infinite; 
-    
+    text-align: center;
+    border: 4px solid; 
+    animation: rgb-border 5s linear infinite; 
+    }
         }
 
         h2 {
@@ -197,7 +211,7 @@
             <h1>Hi, I'm MD.SHAREK ABDULLAH</h1>
             <p>Frontend Developer</p>
             <p>I am a front-end developer and professional at CSS</p>
-            <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" class="contact-button">Contact Me</a>
+           <button> <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" class="contact-button">Contact Me</a></button>
         </div>
         <div class="profile-image">
             <img src="https://i.ibb.co/j4Gd0nD/Screanshot-20230206-1633-Photos.jpg" alt="Md.Sharek's Profile">
@@ -251,3 +265,4 @@
     </footer>
 </body>
 </html>
+
