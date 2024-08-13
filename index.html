@@ -61,6 +61,17 @@
         .nav-links a:hover {
             color: #00aaff;
         }
+        @keyframes bluish-border {
+    0% {
+        border-color: #00aaff;
+    }
+    50% {
+        border-color: #00ffff;
+    }
+    100% {
+        border-color: #00aaff;
+    }
+        }
 
         .home-section {
             display: flex;
@@ -72,6 +83,8 @@
             margin: 50px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             flex-wrap: wrap;
+            animation: rgb-border 5s linear infinite; 
+    
         }
 
         .intro, .profile-image {
@@ -83,7 +96,7 @@
             max-width: 100%;
             height: auto;
             margin: 20px 0;
-            border-radius: 15px; /* Slight curve */
+            border-radius: 10px 40px 10px 40px; 
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
         }
 
@@ -97,6 +110,17 @@
                 max-width: 40%;
             }
         }
+        @keyframes bluish-border {
+    0% {
+        border-color: #00aaff;
+    }
+    50% {
+        border-color: #00ffff;
+    }
+    100% {
+        border-color: #00aaff;
+    }
+        }
 
         .about-section, .skills-section, .projects-section {
             padding: 50px;
@@ -105,6 +129,8 @@
             border-radius: 20px; /* Slight curve */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             text-align: center;
+            animation: rgb-border 5s linear infinite; 
+    
         }
 
         h2 {
