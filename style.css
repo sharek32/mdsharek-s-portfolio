@@ -1,3 +1,56 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000; /* Set the background to black */
+    color: #00FF00; /* Set text to green */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Intro Screen */
+#intro-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+}
+
+#view-portfolio {
+    padding: 15px 40px;
+    background: #00FF00;
+    color: #000;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+#view-portfolio:hover {
+    transform: scale(1.1);
+}
+
+#loading-texts {
+    display: none;
+}
+
+.loading-text {
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Hidden Portfolio */
+#portfolio-content {
+    display: none;
+}
+
+/* Portfolio Content Styles (Your Existing Styles) */
+
 * {
     margin: 0;
     padding: 0;
