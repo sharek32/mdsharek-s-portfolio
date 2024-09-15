@@ -219,6 +219,54 @@ body {
     color: #ccc;
 }
 
+/* Certificates section styles */
+.certificates-section {
+    padding: 100px 50px;
+    background: #ffffff;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.certificates-section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #00bcd4;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.certificates-section .project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.certificates-section .project-card {
+    width: 100%;
+    max-width: 300px;
+    background: #323232;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificates-section .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
+}
+
+.certificates-section .project-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.certificates-section .project-info p {
+    font-size: 16px;
+    color: #ccc;
+}
+
 /* Contact section styles */
 .contact-section {
     padding: 100px 50px;
@@ -240,20 +288,53 @@ body {
     color: #ccc;
 }
 
-.contact-section .contact-btn {
-    padding: 15px 40px;
-    background: #00bcd4;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 30px;
-    transition: background 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5);
+.contact-section .form-group {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contact-section .contact-btn:hover {
-    background: #0097a7;
-    transform: scale(1.1);
+.contact-section input,
+.contact-section textarea {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #FFD700;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: border-color 0.3s;
+    position: relative;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #FF6B6B;
+}
+
+.contact-section label {
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    font-size: 0.9rem;
+    color: #FFD700;
+}
+
+.contact-section .btn {
+    background-color: #FFD700;
+    color: #1A535C;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.contact-section .btn:hover {
+    background-color: #FF6B6B;
 }
 
 /* Footer styles */
@@ -335,11 +416,13 @@ footer p {
 
     .about-section,
     .projects-section,
+    .certificates-section,
     .contact-section {
         padding: 50px 20px;
     }
 
-    .project-card {
+    .project-card,
+    .certificates-section .project-card {
         width: 100%;
     }
 
@@ -361,62 +444,3 @@ footer p {
         display: flex;
     }
 }
-/* Contact Section */
-        #contact {
-            background-color: #1A535C;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        #contact h2 {
-            font-size: 2.5rem;
-            color: #FFD700;
-        }
-
-        #contact .form-group {
-            margin-bottom: 20px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #contact input, #contact textarea {
-            width: 80%;
-            max-width: 600px;
-            padding: 10px;
-            background-color: transparent;
-            border: 2px solid #FFD700;
-            color: white;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: border-color 0.3s;
-            position: relative;
-        }
-
-        #contact input:focus, #contact textarea:focus {
-            border-color: #FF6B6B;
-        }
-
-        #contact label {
-            position: absolute;
-            top: -25px;
-            left: 10px;
-            font-size: 0.9rem;
-            color: #FFD700;
-        }
-
-        #contact .btn {
-            background-color: #FFD700;
-            color: #1A535C;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s;
-            text-decoration: none;
-        }
-
-        #contact .btn:hover {
-            background-color: #FF6B6B;
-        }
