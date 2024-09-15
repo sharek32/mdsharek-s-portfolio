@@ -361,3 +361,62 @@ footer p {
         display: flex;
     }
 }
+/* Contact Section */
+        #contact {
+            background-color: #1A535C;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            color: #FFD700;
+        }
+
+        #contact .form-group {
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contact input, #contact textarea {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            background-color: transparent;
+            border: 2px solid #FFD700;
+            color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: border-color 0.3s;
+            position: relative;
+        }
+
+        #contact input:focus, #contact textarea:focus {
+            border-color: #FF6B6B;
+        }
+
+        #contact label {
+            position: absolute;
+            top: -25px;
+            left: 10px;
+            font-size: 0.9rem;
+            color: #FFD700;
+        }
+
+        #contact .btn {
+            background-color: #FFD700;
+            color: #1A535C;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        #contact .btn:hover {
+            background-color: #FF6B6B;
+        }
