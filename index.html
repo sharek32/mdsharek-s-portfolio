@@ -9,38 +9,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-     <div id="intro-screen">
-        <button id="view-portfolio" class="btn">Click this button to see my portfolio</button>
-        <div id="loading-texts">
-            <p class="loading-text" id="loading1">Codes loading...</p>
-            <p class="loading-text" id="loading2">Properly aligned...</p>
-            <p class="loading-text" id="loading3">Let's go...</p>
+
+    <!-- Initial Screen -->
+    <div id="initial-screen" class="centered-container">
+        <button id="show-portfolio-btn" class="green-button">Click This Button to See My Portfolio</button>
+        <div id="loading-text" class="loading-text hidden">
+            <p>Codes loading...</p>
+            <p>Properly aligned...</p>
+            <p>Let's go...</p>
         </div>
     </div>
 
-    <header id="header">
-        <nav class="navbar">
-            <div class="logo">MyPortfolio</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <!-- Portfolio Content (Initially Hidden) -->
+    <div id="portfolio-container" class="hidden">
+        <header id="header">
+            <nav class="navbar">
+                <div class="logo">MyPortfolio</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+            <div class="hero">
+                <h1 class="hero-title">MD.SHAREK ABDULLAH</h1>
+                <p class="hero-subtitle">Frontend Developer</p>
+                <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" class="btn">Contact Me</a>
             </div>
-        </nav>
-        <div class="hero">
-            <h1 class="hero-title">MD.SHAREK ABDULLAH</h1>
-            <p class="hero-subtitle">Frontend Developer</p>
-            <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" class="btn">Contact Me</a>
-        </div>
-        <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
-    </header>
-
+            <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+        </header>
     <section id="about" class="about-section">
         <div class="about-content">
             <h2>About Me</h2>
@@ -178,34 +181,31 @@
     </footer>
 
     <script>
-        // script.js
-document.getElementById("view-portfolio").addEventListener("click", function() {
+ document.getElementById('show-portfolio-btn').addEventListener('click', function () {
     // Hide the button
-    document.getElementById("view-portfolio").style.display = "none";
-    
-    // Show the loading text with a delay
-    const loadingTexts = document.getElementById("loading-texts");
-    loadingTexts.style.display = "block";
+    this.classList.add('hidden');
 
-    // Animate loading texts one by one
-    setTimeout(() => {
-        document.getElementById("loading1").style.opacity = "1";
-    }, 500);
-    
-    setTimeout(() => {
-        document.getElementById("loading2").style.opacity = "1";
-    }, 1500);
+    // Show the loading text
+    const loadingText = document.getElementById('loading-text');
+    loadingText.classList.remove('hidden');
 
-    setTimeout(() => {
-        document.getElementById("loading3").style.opacity = "1";
-    }, 2500);
+    // Get all loading text paragraphs
+    const loadingSteps = loadingText.querySelectorAll('p');
 
-    // Display the portfolio after the animation ends
+    // Animate each line of text with a delay
+    loadingSteps.forEach((step, index) => {
+        setTimeout(() => {
+            step.classList.add('show');
+        }, index * 1000); // Delay of 1 second between each text
+    });
+
+    // Show the portfolio after the loading animation
     setTimeout(() => {
-        loadingTexts.style.display = "none";
-        document.getElementById("portfolio-content").style.display = "block";
-    }, 4000); // 4 seconds delay
+        loadingText.classList.add('hidden');
+        document.getElementById('portfolio-container').classList.remove('hidden');
+    }, loadingSteps.length * 1000 + 500); // Add a small delay after the last line
 });
+
 
         // Toggle navigation menu on mobile
         const hamburger = document.querySelector('.hamburger');
