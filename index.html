@@ -9,21 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <!-- Initial Screen -->
-    <div id="initial-screen" class="centered-container">
-        <button id="show-portfolio-btn" class="green-button">Click This Button to See My Portfolio</button>
-        <div id="loading-text" class="loading-text hidden">
-            <p>Codes loading...</p>
-            <p>Properly aligned...</p>
-            <p>Let's go...</p>
+    <div id="intro-screen">
+        <button id="view-portfolio" class="btn">Click this button to see my portfolio</button>
+        <div id="loading-texts" style="display: none;">
+            <p class="loading-text" id="loading1">Codes loading...</p>
+            <p class="loading-text" id="loading2">Properly aligned...</p>
+            <p class="loading-text" id="loading3">Let's go...</p>
         </div>
     </div>
 
-    <!-- Portfolio Content (Initially Hidden) -->
-    <div id="portfolio-container" class="hidden">
-        <header id="header">
-            <nav class="navbar">
+    <div id="portfolio-content" style="display:none;">
+         <header id="header">
+            <!-- Navbar and Hero sections here -->
+          <nav class="navbar">
                 <div class="logo">MyPortfolio</div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -37,7 +35,8 @@
                     <div class="line"></div>
                 </div>
             </nav>
-            <div class="hero">
+        </header>
+      <div class="hero">
                 <h1 class="hero-title">MD.SHAREK ABDULLAH</h1>
                 <p class="hero-subtitle">Frontend Developer</p>
                 <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" class="btn">Contact Me</a>
@@ -170,73 +169,50 @@
             <a href="#" class="btn">Send Message</a>
         </form>
     </section>
-
-    <footer>
+  <footer>
         <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
         <div class="social-links">
             <a href="https://twitter.com/@Sharek97"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/md-sharek-6a51362a8"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/sharek32"><i class="fab fa-github"></i></a>
         </div>
-    </footer>
+  </footer>
+    </div>
+
+    </div>
 
     <script>
- document.getElementById('show-portfolio-btn').addEventListener('click', function () {
-    // Hide the button
-    this.classList.add('hidden');
+    document.addEventListener("DOMContentLoaded", function() {
+        // Attach the event listener when the document is ready
+        document.getElementById("view-portfolio").addEventListener("click", function() {
+            // Hide the button
+            this.style.display = "none";
 
-    // Show the loading text
-    const loadingText = document.getElementById('loading-text');
-    loadingText.classList.remove('hidden');
+            // Show the loading text with a delay
+            const loadingTexts = document.getElementById("loading-texts");
+            loadingTexts.style.display = "block";
 
-    // Get all loading text paragraphs
-    const loadingSteps = loadingText.querySelectorAll('p');
+            // Animate loading texts one by one
+            setTimeout(() => {
+                document.getElementById("loading1").style.opacity = "1";
+            }, 500);
 
-    // Animate each line of text with a delay
-    loadingSteps.forEach((step, index) => {
-        setTimeout(() => {
-            step.classList.add('show');
-        }, index * 1000); // Delay of 1 second between each text
+            setTimeout(() => {
+                document.getElementById("loading2").style.opacity = "1";
+            }, 1500);
+
+            setTimeout(() => {
+                document.getElementById("loading3").style.opacity = "1";
+            }, 2500);
+
+            // Display the portfolio after the animation ends
+            setTimeout(() => {
+                loadingTexts.style.display = "none";
+                document.getElementById("portfolio-content").style.display = "block";
+                document.getElementById("intro-screen").style.display = "none"; // Hide intro screen completely
+            }, 4000); // 4 seconds delay
+        });
     });
-
-    // Show the portfolio after the loading animation
-    setTimeout(() => {
-        loadingText.classList.add('hidden');
-        document.getElementById('portfolio-container').classList.remove('hidden');
-    }, loadingSteps.length * 1000 + 500); // Add a small delay after the last line
-});
-
-
-        // Toggle navigation menu on mobile
-        const hamburger = document.querySelector('.hamburger');
-        const navbar = document.querySelector('.navbar');
-
-        hamburger.addEventListener('click', () => {
-            navbar.classList.toggle('active');
-        });
-
-        // Smooth scroll for links
-        const navLinks = document.querySelectorAll('.nav-links a');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelector(link.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                navbar.classList.remove('active');
-            });
-        });
-
-        // Change navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
     </script>
 </body>
 </html>
