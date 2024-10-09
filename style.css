@@ -1,8 +1,8 @@
             /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: #000; /* Set the background to black */
-    color: #00FF00; /* Set text to green */
+    background: #000;
+    color: #FFFFFF; 
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -88,10 +88,10 @@ body {
 }
 
 .nav-links a:hover {
-    color: #00bcd4; /* Cyan color on hover */
+    color: #00bcd4;
 }
 
-/* Hamburger menu for mobile */
+
 .hamburger {
     display: none;
     flex-direction: column;
