@@ -3,226 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md Sharek's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shrek's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!--Intro Section-->
     <div id="intro-screen">
-        <button id="view-portfolio" class="btn">Click this button to see my portfolio</button>
-        <div id="loading-texts" style="display: none;">
-            <p class="loading-text" id="loading1">Codes loading...</p>
-            <p class="loading-text" id="loading2">Properly aligned...</p>
-            <p class="loading-text" id="loading3">Let's go...</p>
+        <div class="loading-btn">
+            <button id="view-portfolio" class="btn">View Portfolio</button>
+            <div id="loading-texts" style="display: none;">
+                <p class="loading-text">Loading...</p>
+                <p class="loading-text">Codes Properly Aligned...</p>
+                <p class="loading-text">Let's Go!</p>
+            </div>
         </div>
     </div>
 
-    <div id="portfolio-content" style="display:none;">
-         <header id="header">
-            <!-- Navbar and Hero sections here -->
-          <nav class="navbar">
-                <div class="logo">Md Sharek's Portfolio</div>
+    <!--Portfolio Content-->
+    <div id="portfolio-content" style="display: none;">
+
+        <!--Nav Section-->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">MyPortfolio</a>
                 <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#hero">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certifications</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-            </nav>
-        </header>
-      <div class="hero">
-                <h1 class="hero-title">MD.SHAREK ABDULLAH</h1>
-                <p class="hero-subtitle">Frontend Developer</p>
-                <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" class="btn">Contact Me</a>
             </div>
-            <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
-        </header>
+        </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <h1 class="hero-title">Welcome to My Portfolio</h1>
+        <p class="hero-subtitle">Showcasing my skills, projects, and achievements</p>
+        <a href="#about" class="btn">Explore</a>
+    </header>
+
+    <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>About Me</h2>
-            <p>Greetings! I am Md. Sharek Abdullah, currently a student at Ideal School and College in Motiheel, Dhaka, with a strong interest in front-end web development. My expertise lies in creating responsive and well-organized websites utilizing HTML and CSS. I am also enhancing my skill set with JavaScript, React, C++, and Python to develop more interactive and functional web applications.
-
-I have obtained various certifications, including CS50 Scratch from Harvard University, Google Analytics, Responsive Web Design from FreeCodeCamp, and Front-End Development from Great Learning. These courses have significantly contributed to my technical proficiency and comprehension of web development.
-
-I am dedicated to continuous learning and actively engage in new projects to keep abreast of the latest technologies, with the goal of designing both aesthetically pleasing and highly functional web applications.</p>
-        </div>
+        <h2>About Me</h2>
+        <p>
+            I am a passionate developer with a keen interest in creating innovative solutions
+            using cutting-edge technologies. With expertise in web development, machine learning, and design, I strive to deliver impactful projects.
+        </p>
     </section>
 
-    <section id="projects" class="projects-section">
+    <!--Project Section -->
+    <section id="projects" class="projects-section" style="background-color: #24243e;">
         <h2>My Projects</h2>
         <div class="project-gallery">
-            <!-- Project Section-->
-                <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/mDCsg1725287236.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://sharek32.github.io/instaprofile/" aria-label="Instagram Profile Example">Instagram Profile Example</a></h3>
-                <p>A simple example of an Instagram profile layout using HTML and CSS.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/Bbkl4664PRM.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://jabirstemplates.godaddysites.com" aria-label="Responsive Portfolio Template" target="_blank" rel="noopener noreferrer">Responsive Portfolio Template</a></h3>
-                <p>This is my own website and portfolio template store. You can buy templates for very cheep price but very beautiful and animated templates.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/tOpmg1725286618.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://sharek32.github.io/ShreksCalculator/" aria-label="Simple Calculator" target="_blank" rel="noopener noreferrer">Simple Calculator</a></h3>
-                <p>A basic functional calculator built with HTML, CSS, and JavaScript.</p>
-            </div>
-        </div>
-        <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/ANIOM1725286557.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://mdsharek32com.godaddysites.com" aria-label="My Website" target="_blank" rel="noopener noreferrer">My Website</a></h3>
-                <p>An overview of my personal website with information about my work and skills.</p>
-            </div>
-        </div>
             <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/ABh6152Sqw.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://sharek32.github.io/Internet-and-Aiquiz/">Internet and Ai Quiz</a></h3>
-                <p>This is a quiz on internet and Ai</p>
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/mDCsg1725287236.png');"></div>
+                <div class="project-info">
+                    <h3>Instagram Profile Example</h3>
+                    <p>A simple example of an Instagram profile layout using HTML and CSS.</p>
+                    <a href="https://sharek32.github.io/instaprofile/" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
             </div>
-        </div>
-        <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/IjtM41725286524.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://sharek32.github.io/sharek-s-survey-form/" aria-label="Survey Form" target="_blank" rel="noopener noreferrer">Survey Form</a></h3>
-                <p>An interactive survey form created with HTML and CSS.</p>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/Bbkl4664PRM.png');"></div>
+                <div class="project-info">
+                    <h3>Responsive Portfolio Template</h3>
+                    <p>A store for animated and affordable templates.</p>
+                    <a href="https://jabirstemplates.godaddysites.com" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
             </div>
-        </div>
-        <div class="project-card">
-            <div class="project-img" style="background-image: url('https://i.imghippo.com/files/TQyZh1725286283.png');"></div>
-            <div class="project-info">
-                <h3><a href="https://sharek32.github.io/techdocpython/" aria-label="Technical Documentation Page" target="_blank" rel="noopener noreferrer">Technical Documentation Page</a></h3>
-                <p>A simple Python technical documentation page using HTML and CSS.</p>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/tOpmg1725286618.png');"></div>
+                <div class="project-info">
+                    <h3>Simple Calculator</h3>
+                    <p>A basic functional calculator built with HTML, CSS, and JavaScript.</p>
+                    <a href="https://sharek32.github.io/ShreksCalculator/" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
             </div>
-        </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/ANIOM1725286557.png');"></div>
+                <div class="project-info">
+                    <h3>My Website</h3>
+                    <p>An overview of my personal website with information about my work and skills.</p>
+                    <a href="https://mdsharek32com.godaddysites.com" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/ABh6152Sqw.png');"></div>
+                <div class="project-info">
+                    <h3>Internet and AI Quiz</h3>
+                    <p>This is a quiz on internet and AI.</p>
+                    <a href="https://sharek32.github.io/Internet-and-Aiquiz/" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/IjtM41725286524.png');"></div>
+                <div class="project-info">
+                    <h3>Survey Form</h3>
+                    <p>An interactive survey form created with HTML and CSS.</p>
+                    <a href="https://sharek32.github.io/sharek-s-survey-form/" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('https://i.imghippo.com/files/TQyZh1725286283.png');"></div>
+                <div class="project-info">
+                    <h3>Technical Documentation Page</h3>
+                    <p>A simple Python technical documentation page using HTML and CSS.</p>
+                    <a href="https://sharek32.github.io/techdocpython/" target="_blank" class="btn animated-btn">View Project</a>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates-section">
+    
+    
+        <!--Certificate Section-->
+        <section id="certificates" class="certificates-section" style="background-color: #20202a;">
         <h2>My Certificates</h2>
         <div class="project-gallery">
-            <!-- Certificate cards -->
             <div class="project-card">
-                <h3><a href="https://i.ibb.co.com/85vMG0z/image-2024-12-19-123348773.png">Cloud Computing by Harvard Muktopath</a></h3>
-                <p>This is a certification course of Cloud Computing by Muktopath.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Cloud Computing by Muktopath</h3>
+                    <a href="https://i.ibb.co.com/85vMG0z/image-2024-12-19-123348773.png" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://i.imghippo.com/files/nRC001723984612.jpg">CS50 Scratch by Harvard University</a></h3>
-                <p>This is a certification course of CS50 Scratch by Harvard University.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>CS50 Scratch by Harvard University</h3>
+                    <a href="https://i.imghippo.com/files/nRC001723984612.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://i.ibb.co.com/NKr1DKz/image-2024-12-19-122105901.png">Front-End Development by Harvard Sololearn</a></h3>
-                <p>This is a certification course of Front-End Development by Sololearn.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Front-End Development by Sololearn</h3>
+                    <a href="https://i.ibb.co.com/NKr1DKz/image-2024-12-19-122105901.png" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://www.credential.net/b85c4def-ad27-4db5-ba25-e347d29157d8#gs.dnqstj">Google Playstore Listing by Google Academy</a></h3>
-                <p>This is a certification exam of Google Playstore Listing by Google Playstore Academy.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Google Playstore Listing by Google Academy</h3>
+                    <a href="https://www.credential.net/b85c4def-ad27-4db5-ba25-e347d29157d8#gs.dnqstj" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://i.postimg.cc/YSW-4dHbD/Screenshot-20240805-081944-Microsoft-365-Office.jpg">Google Analytics by Google</a></h3>
-                <p>This is a certification course of Google Analytics by Google.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Google Analytics by Google</h3>
+                    <a href="https://i.postimg.cc/YSW-4dHbD/Screenshot-20240805-081944-Microsoft-365-Office.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://www.hackerrank.com/certificates/iframe/57f196f3e778">CSS Basic Test by HackerRank</a></h3>
-                <p>This is a certification test of CSS BAsocs by HackerRank.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>CSS Basic Test by HackerRank</h3>
+                    <a href="https://www.hackerrank.com/certificates/iframe/57f196f3e778" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://i.postimg.cc/9QSRPMtq/Screenshot-20240712-160209-Chrome.jpg">Responsive Web Design by Free Code Camp</a></h3>
-                <p>This is a certification course of Responsive Web Design by Free Code Camp.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Responsive Web Design by Free Code Camp</h3>
+                    <a href="https://i.postimg.cc/9QSRPMtq/Screenshot-20240712-160209-Chrome.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://i.postimg.cc/7YKT6X59/Screenshot-20240712-221729-Chrome.jpg">Front-End Development by Great Learning</a></h3>
-                <p>This is a certification course of Front-End Development by Great Learning.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Front-End Development by Great Learning</h3>
+                    <a href="https://i.postimg.cc/7YKT6X59/Screenshot-20240712-221729-Chrome.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href=" https://www.sololearn.com/certificates/CC-ZS0YCXKH">ntoduction to Java Script by Sololearn</a></h3>
-                <p>This is a certification course of Introduction to Java Script by Sololearn.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>Introduction to JavaScript by Sololearn</h3>
+                    <a href="https://www.sololearn.com/certificates/CC-ZS0YCXKH" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
+    
             <div class="project-card">
-                <h3><a href="https://i.postimg.cc/3xW0DppT/Screenshot-20240727-012733-Microsoft-365-Office.jpg">CSS by SimpliLearn</a></h3>
-                <p>This is a certification course of CSS by SimpliLearn.</p>
+                <div class="certificate-img"></div>
+                <div class="project-info">
+                    <h3>CSS by SimpliLearn</h3>
+                    <a href="https://i.postimg.cc/3xW0DppT/Screenshot-20240727-012733-Microsoft-365-Office.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+                </div>
             </div>
-           
-        </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2>Contact Me</h2>
-        <form action="">
+        <form action="#" method="POST">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email">
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+                <textarea id="message" name="message" rows="5" required></textarea>
             </div>
-            <a href="#" class="btn">Send Message</a>
+            <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
-  <footer>
+
+</div>
+
+    </div>    
+
+    <!-- Footer -->
+    <footer>
         <p>&copy; 2024 MyPortfolio. All rights reserved.</p>
         <div class="social-links">
             <a href="https://twitter.com/@Sharek97"><i class="fab fa-twitter"></i></a>
             <a href="https://www.linkedin.com/in/md-sharek-6a51362a8"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/sharek32"><i class="fab fa-github"></i></a>
         </div>
-  </footer>
-    </div>
-
-    </div>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Attach the event listener when the document is ready
-        document.getElementById("view-portfolio").addEventListener("click", function() {
-            // Hide the button
-            this.style.display = "none";
-
-            // Show the loading text with a delay
-            const loadingTexts = document.getElementById("loading-texts");
-            loadingTexts.style.display = "block";
-
-            // Animate loading texts one by one
-            setTimeout(() => {
-                document.getElementById("loading1").style.opacity = "1";
-            }, 500);
-
-            setTimeout(() => {
-                document.getElementById("loading2").style.opacity = "1";
-            }, 1500);
-
-            setTimeout(() => {
-                document.getElementById("loading3").style.opacity = "1";
-            }, 2500);
-
-            // Display the portfolio after the animation ends
-            setTimeout(() => {
-                loadingTexts.style.display = "none";
-                document.getElementById("portfolio-content").style.display = "block";
-                document.getElementById("intro-screen").style.display = "none"; // Hide intro screen completely
-            }, 4000); // 4 seconds delay
-        });
-    });
-    </script>
+    </footer>    
+    <script src="script.js"></script>
 </body>
 </html>
