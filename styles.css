@@ -260,7 +260,7 @@ form {
 
 form label {
     display: block;
-    color: #bbbbbb;
+    color: #000000;
     margin-bottom: 5px;
     font-size: 0.9rem;
 }
@@ -269,7 +269,7 @@ form input,
 form textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #252525;
     border-radius: 5px;
     background: #1e1e1e;
     color: #ffffff;
