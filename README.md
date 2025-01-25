@@ -14,7 +14,7 @@ You can explore my projects, learn more about me, and find ways to connect with 
 ---
  Technologies Used
 
-- **HTML5**
-- **CSS3**
+- **HTML**
+- **CSS**
 - **JavaScript**
 ---
