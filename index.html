@@ -3,275 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Shrek's Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <title>Md Sharek - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-    <!-- Intro Section -->
-    <div id="intro-screen">
-        <div class="loading-container">
-            <!-- Loading Bar -->
-            <div id="loading-bar"></div>
-            <div id="loading-texts">
-                <p class="loading-text">Loading...</p>
-                <p class="loading-text">Codes Properly Aligned...</p>
-                <p class="loading-text">Let's Go!</p>
-            </div>
-            <button id="view-portfolio" class="btn">View Portfolio</button>
+<body class="parallax-bg">
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 relative">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse" style="animation-delay: 2s;"></div>
         </div>
-    </div>
-
-    <!-- Portfolio Content -->
-    <div id="portfolio-content" style="display: none;">
-
-        <!-- Progress Bar -->
-        <div id="progress-bar"></div>
-
-        <!-- Scroll-to-Top Button -->
-        <button id="scroll-to-top" class="scroll-to-top-btn">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-
-        <!-- Dark/Light Mode Toggle -->
-        <button id="theme-toggle" class="theme-toggle-btn">
-            <i class="fas fa-moon"></i>
-        </button>
-
-        <!-- Nav Section -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="#" class="logo">MyPortfolio</a>
-                <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#certificates">Certifications</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <header id="hero" class="hero">
-            <h1 class="hero-title">Welcome to My Portfolio</h1>
-            <p class="hero-subtitle">Showcasing my skills, projects, and achievements</p>
-            <a href="#about" class="btn">Explore</a>
-        </header>
-
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <h2>About Me</h2>
-            <p>
-                I am <strong>Md Sharek Abdullah Al Jabir</strong>, a Full Stack Developer (front-end + back-end) with a passion for creating innovative solutions. My goal is to become a Machine Learning Engineer and Data Science Specialist, and I am currently planning a big project that will be a game-changer in the internet world.
-            </p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <div class="skill-item">HTML</div>
-                <div class="skill-item">CSS</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">C#</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Rest API</div>
-                <div class="skill-item">MySQL</div>
-            </div>
-        </section>
-
-        <!-- Project Section -->
-        <section id="projects" class="projects-section">
-            <h2>My Projects</h2>
-            <div class="project-gallery">
-                <!-- Project Cards -->
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.imghippo.com/files/mDCsg1725287236.png');"></div>
-                    <div class="project-info">
-                        <h3>Instagram Profile Example</h3>
-                        <p>A simple example of an Instagram profile layout using HTML and CSS.</p>
-                        <a href="https://sharek32.github.io/instaprofile/" target="_blank" class="btn animated-btn">View Project</a>
+        
+        <div class="glass-card rounded-3xl p-8 md:p-12 max-w-4xl w-full card-3d floating-animation text-center">
+            <div class="mb-8">
+                <div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 p-1">
+                    <div class="w-full h-full rounded-full bg-slate-800 flex items-center justify-center text-4xl font-bold text-blue-400">
+                        SA
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.imghippo.com/files/Bbkl4664PRM.png');"></div>
-                    <div class="project-info">
-                        <h3>Responsive Portfolio Template</h3>
-                        <p>A store for animated and affordable templates.</p>
-                        <a href="https://jabirstemplates.godaddysites.com" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 text-glow">
+                    Md Sharek Abdullah Al Jabir
+                </h1>
+                <div class="text-xl md:text-2xl text-blue-300 mb-6 typing-animation overflow-hidden whitespace-nowrap">
+                    Full Stack Developer
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/NFM3kmL/Screenshot-2025-01-26-213928.png');"></div>
-                    <div class="project-info">
-                        <h3>Shrek's Calculator</h3>
-                        <p>A basic functional calculator built with HTML, CSS, and JavaScript.</p>
-                        <a href="https://sharek32.github.io/jabir-s-calculator/" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.imghippo.com/files/ANIOM1725286557.png');"></div>
-                    <div class="project-info">
-                        <h3>My Sports Website</h3>
-                        <p>An overview of my sports website with information about sports.</p>
-                        <a href="https://mdsharek32com.godaddysites.com" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.imghippo.com/files/ABh6152Sqw.png');"></div>
-                    <div class="project-info">
-                        <h3>Internet and AI Quiz</h3>
-                        <p>This is a quiz on internet and AI.</p>
-                        <a href="https://sharek32.github.io/Internet-and-Aiquiz/" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.imghippo.com/files/IjtM41725286524.png');"></div>
-                    <div class="project-info">
-                        <h3>Survey Form</h3>
-                        <p>An interactive survey form created with HTML and CSS.</p>
-                        <a href="https://sharek32.github.io/sharek-s-survey-form/" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/DRGkSRv/Screenshot-2025-01-25-201509.png');"></div>
-                    <div class="project-info">
-                        <h3>Shrek's Technical Documentation Page</h3>
-                        <p>A simple Python technical documentation page using HTML and CSS.</p>
-                        <a href="https://sharek32.github.io/tdp" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/Dt6YPs2/Screenshot-2025-01-25-201524.png');"></div>
-                    <div class="project-info">
-                        <h3>Product Landing Page</h3>
-                        <p>A simple Product Landing Page using HTML, CSS and Java Script.</p>
-                        <a href="https://sharek32.github.io/plp" target="_blank" class="btn animated-btn">View Project</a>
-                    </div>
+                <p class="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                    Passionate about creating innovative web solutions and aspiring to become a Machine Learning Engineer & Data Science Specialist. Currently planning a game-changing internet project.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#projects" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-blue-500/25">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="border border-blue-400 text-blue-400 px-8 py-3 rounded-full hover:bg-blue-400 hover:text-white transition-all duration-300">
+                        Get In Touch
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Certificate Section -->
-        <section id="certificates" class="certificates-section">
-            <h2>My Certificates</h2>
-            <div class="project-gallery">
-                <!-- Certificate Cards -->
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co/85vMG0z/image-2024-12-19-123348773.png');"></div>
-                    <div class="project-info">
-                        <h3>Cloud Computing by Muktopath</h3>
-                        <a href="https://i.ibb.co/85vMG0z/image-2024-12-19-123348773.png" target="_blank" class="btn animated-btn">View Certificate</a>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-white text-center mb-16 text-glow">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    HTML
+                </div>
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    CSS
+                </div>
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    JavaScript
+                </div>
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    C#
+                </div>
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    Python
+                </div>
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    REST API
+                </div>
+                <div class="skill-orb w-20 h-20 rounded-full flex items-center justify-center text-white font-semibold mx-auto">
+                    MySQL
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-white text-center mb-16 text-glow">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Instagram Profile Example -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center">
+                        <i class="fab fa-instagram text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Instagram Profile Example</h3>
+                        <p class="text-gray-300 mb-4">A responsive Instagram profile clone showcasing modern UI design principles.</p>
+                        <a href="https://sharek32.github.io/instaprofile/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.imghippo.com/files/nRC001723984612.jpg');"></div>
-                    <div class="project-info">
-                        <h3>CS50 Scratch by Harvard University</h3>
-                        <a href="https://i.imghippo.com/files/nRC001723984612.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Responsive Portfolio Template -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Responsive Portfolio Template</h3>
+                        <p class="text-gray-300 mb-4">A fully responsive portfolio template with modern design and smooth animations.</p>
+                        <a href="https://jabirstemplates.godaddysites.com" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co/NKr1DKz/image-2024-12-19-122105901.png');"></div>
-                    <div class="project-info">
-                        <h3>Front-End Development by Sololearn</h3>
-                        <a href="https://i.ibb.co/NKr1DKz/image-2024-12-19-122105901.png" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Shrek's Calculator -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-calculator text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Shrek's Calculator</h3>
+                        <p class="text-gray-300 mb-4">A feature-rich calculator application with an intuitive user interface.</p>
+                        <a href="https://sharek32.github.io/jabir-s-calculator/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/4SG0Wnb/Screenshot-2025-01-25-202425.png');"></div>
-                    <div class="project-info">
-                        <h3>Google Playstore Listing by Google Academy</h3>
-                        <a href="https://www.credential.net/b85c4def-ad27-4db5-ba25-e347d29157d8#gs.dnqstj" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Sports Website -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-futbol text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">My Sports Website</h3>
+                        <p class="text-gray-300 mb-4">A comprehensive sports website with dynamic content and interactive features.</p>
+                        <a href="https://mdsharek32com.godaddysites.com" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.postimg.cc/YSW-4dHbD/Screenshot-20240805-081944-Microsoft-365-Office.jpg');"></div>
-                    <div class="project-info">
-                        <h3>Google Analytics by Google</h3>
-                        <a href="https://i.postimg.cc/YSW-4dHbD/Screenshot-20240805-081944-Microsoft-365-Office.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Internet and AI Quiz -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-brain text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Internet and AI Quiz</h3>
+                        <p class="text-gray-300 mb-4">An interactive quiz application testing knowledge about internet and AI technologies.</p>
+                        <a href="https://sharek32.github.io/Internet-and-Aiquiz/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/CnH90F0/Screenshot-2025-01-25-202115.png');"></div>
-                    <div class="project-info">
-                        <h3>CSS Basic Test by HackerRank</h3>
-                        <a href="https://www.hackerrank.com/certificates/iframe/57f196f3e778" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Survey Form -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center">
+                        <i class="fas fa-poll text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Survey Form</h3>
+                        <p class="text-gray-300 mb-4">A responsive survey form with validation and modern styling.</p>
+                        <a href="https://sharek32.github.io/sharek-s-survey-form/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.postimg.cc/9QSRPMtq/Screenshot-20240712-160209-Chrome.jpg');"></div>
-                    <div class="project-info">
-                        <h3>Responsive Web Design by Free Code Camp</h3>
-                        <a href="https://i.postimg.cc/9QSRPMtq/Screenshot-20240712-160209-Chrome.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Shrek's Technical Documentation Page -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-book text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Shrek's Technical Documentation Page</h3>
+                        <p class="text-gray-300 mb-4">A technical documentation page for Shrek's projects, featuring clear structure and navigation.</p>
+                        <a href="https://sharek32.github.io/tdp" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/zx4RXdf/image-2025-01-25-203111995.png');"></div>
-                    <div class="project-info">
-                        <h3>Front-End (React) Test by Hacker Rank</h3>
-                        <a href="https://www.hackerrank.com/certificates/iframe/d8e07289f23e" target="_blank" class="btn animated-btn">View Certificate</a>
+
+                <!-- Product Landing Page -->
+                <div class="glass-card rounded-2xl overflow-hidden project-card">
+                    <div class="h-48 bg-gradient-to-br from-blue-700 to-blue-400 flex items-center justify-center">
+                        <i class="fas fa-globe text-6xl text-white"></i>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.ibb.co.com/nzttmdD/b42666d0-dbb5-45ba-9d1f-a0e15b61cb99.jpg');"></div>
-                    <div class="project-info">
-                        <h3>Introduction to JavaScript by Sololearn</h3>
-                        <a href="https://www.sololearn.com/en/certificates/CC-ZS0YCXKH" target="_blank" class="btn animated-btn">View Certificate</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img" style="background-image: url('https://i.postimg.cc/3xW0DppT/Screenshot-20240727-012733-Microsoft-365-Office.jpg');"></div>
-                    <div class="project-info">
-                        <h3>CSS by SimpliLearn</h3>
-                        <a href="https://i.postimg.cc/3xW0DppT/Screenshot-20240727-012733-Microsoft-365-Office.jpg" target="_blank" class="btn animated-btn">View Certificate</a>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Product Landing Page</h3>
+                        <p class="text-gray-300 mb-4">A modern product landing page with engaging layout and call-to-action sections.</p>
+                        <a href="https://sharek32.github.io/plp" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors">
+                            View Project <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section id="cta" class="cta-section">
-            <h2>Let's Build Something Amazing Together</h2>
-            <a href="#contact" class="btn">Get in Touch</a>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-white text-center mb-16 text-glow">Certifications</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fas fa-cloud text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Cloud Computing</h3>
+                    <p class="text-blue-200 text-sm mb-3">Muktopath</p>
+                    <a href="https://i.ibb.co/85vMG0z/image-2024-12-19-123348773.png" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fas fa-graduation-cap text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">CS50 Scratch</h3>
+                    <p class="text-blue-200 text-sm mb-3">Harvard University</p>
+                    <a href="https://i.imghippo.com/files/nRC001723984612.jpg" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fas fa-code text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Front-End Development</h3>
+                    <p class="text-blue-200 text-sm mb-3">Sololearn</p>
+                    <a href="https://i.ibb.co/NKr1DKz/image-2024-12-19-122105901.png" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
                 </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 MD Sharek. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://twitter.com/@Sharek97"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/md-sharek-6a51362a8"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/sharek32"><i class="fab fa-github"></i></a>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-google text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Google Playstore Listing</h3>
+                    <p class="text-blue-200 text-sm mb-3">Google Academy</p>
+                    <a href="https://www.credential.net/b85c4def-ad27-4db5-ba25-e347d29157d8#gs.dnqstj" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-google text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Google Analytics</h3>
+                    <p class="text-blue-200 text-sm mb-3">Google</p>
+                    <a href="https://i.postimg.cc/YSW-4dHbD/Screenshot-20240805-081944-Microsoft-365-Office.jpg" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-hackerrank text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">CSS Basic Test</h3>
+                    <p class="text-blue-200 text-sm mb-3">HackerRank</p>
+                    <a href="https://www.hackerrank.com/certificates/iframe/57f196f3e778" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-free-code-camp text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Responsive Web Design</h3>
+                    <p class="text-blue-200 text-sm mb-3">FreeCodeCamp</p>
+                    <a href="https://i.postimg.cc/9QSRPMtq/Screenshot-20240712-160209-Chrome.jpg" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-hackerrank text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Front-End (React) Test</h3>
+                    <p class="text-blue-200 text-sm mb-3">HackerRank</p>
+                    <a href="https://www.hackerrank.com/certificates/iframe/d8e07289f23e" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-js-square text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Introduction to JavaScript</h3>
+                    <p class="text-blue-200 text-sm mb-3">Sololearn</p>
+                    <a href="https://www.sololearn.com/en/certificates/CC-ZS0YCXKH" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
+                <div class="cert-badge rounded-xl p-6 text-center">
+                    <i class="fab fa-css3-alt text-3xl text-white mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">CSS</h3>
+                    <p class="text-blue-200 text-sm mb-3">SimpliLearn</p>
+                    <a href="https://i.postimg.cc/3xW0DppT/Screenshot-20240727-012733-Microsoft-365-Office.jpg" target="_blank" class="inline-block bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 transition">View Certificate</a>
+                </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-8 text-glow">Let's Connect</h2>
+            <p class="text-gray-300 text-lg mb-12">Ready to collaborate on your next project or discuss opportunities in ML and Data Science?</p>
+            
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="https://twitter.com/@Sharek97" target="_blank" class="social-icon w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/md-sharek-6a51362a8" target="_blank" class="social-icon w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sharek32" target="_blank" class="social-icon w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            
+            <div class="glass-card rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+                <p class="text-gray-300 mb-6">I'm always open to discussing new opportunities, innovative projects, and collaborations in web development and machine learning.</p>
+                <div class="text-blue-400 text-lg font-semibold">
+                    Currently planning a game-changing internet project 🚀
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="script.js"></script>
 </body>
 </html>
